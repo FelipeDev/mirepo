@@ -4,8 +4,7 @@ var globalArr;
 
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-      var myArr = JSON.parse(this.responseText);
-      globalArr = myArr;
+      globalArr = JSON.parse(this.responseText);       
   }
 };
 xmlhttp.open("GET", url, true);
@@ -19,15 +18,20 @@ function getApps(myArr) {
     var descripcion;
     var precio;
 
+    limpiaPagina();
+
     for(i = 0; i < myArr["feed"]["entry"].length; i++) {
         img = myArr["feed"]["entry"][i]["im:image"][0];
         nombre = myArr["feed"]["entry"][i]["im:name"];
         descripcion = myArr["feed"]["entry"][i]["summary"];
         precio = myArr["feed"]["entry"][i]["im:price"]["attributes"]["amount"];
 
-      imprimeApp(img["label"],nombre["label"],descripcion["label"],precio);
-      
+        imprimeApp(img["label"],nombre["label"],descripcion["label"],precio);      
     }
+}
+
+function limpiaPagina(){
+    document.body.innerHTML = "";
 }
 
 function imprimeApp(link,nombre,descripcion,precio) {
