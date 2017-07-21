@@ -42,20 +42,18 @@
 	}
 
 	function imprimeApp(link,nombre,descripcion,precio) {
-		document.body.innerHTML += "<div><div class=\"fila\">"+
+		document.body.innerHTML += "<div class=\"tabla\"><div class=\"fila\">"+
 		"<div class=\"bloque\">"+
 		"<img src=\""+ link +"\"/>"+
 		"</div>"+
 		"<div class=\"bloque\">"+
-		"<div>"+
+		
 		"<p>"+ nombre +"</p>	"+
-		"</div>"+
-		"<div>"+
+		
 		"<p>"+ descripcion +"</p>	"+
-		"</div>"+
-		"<div>"+
+		
 		"<p>"+ precio +"</p>	"+
-		"</div>"+
+		
 		"</div>"+
 		"</div></div>";
 	}
