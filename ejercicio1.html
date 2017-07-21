@@ -26,10 +26,39 @@
 		</div>
 		<div>
 		
-		<button>Enviar</button>
+		
 		<button>Cancelar</button>
 		</div>
 	</form> 
-	
+	<button onclick="itera()">Enviar</button>
 	</body>
+
+	<script>
+	function itera(){
+		//document.head.innerHTML+='<link rel="stylesheet" type="text/css" href="ejercicio_style.css">'
+		//document.body.innerHTML+='hola'
+		imprimeApp('http://i.blogs.es/85042c/as17-148-22727/650_1200.jpg','hola','hola','hola');
+		imprimeApp('http://i.blogs.es/85042c/as17-148-22727/650_1200.jpg','hola','hola','hola');
+	}
+
+	function imprimeApp(link,nombre,descripcion,precio) {
+		document.body.innerHTML += "<div><div class=\"fila\">"+
+		"<div class=\"bloque\">"+
+		"<img src=\""+ link +"\"/>"+
+		"</div>"+
+		"<div class=\"bloque\">"+
+		"<div>"+
+		"<p>"+ nombre +"</p>	"+
+		"</div>"+
+		"<div>"+
+		"<p>"+ descripcion +"</p>	"+
+		"</div>"+
+		"<div>"+
+		"<p>"+ precio +"</p>	"+
+		"</div>"+
+		"</div>"+
+		"</div></div>";
+	}
+
+	</script>
 </html>
