@@ -30,35 +30,8 @@
 		<button>Cancelar</button>
 		</div>
 	</form>
-	<button onclick="itera()">Enviar</button>
+	<button onclick="getApps(globalArr)">Enviar</button>
 	</body>
-
-	<script>
-	function itera(){
-		//document.head.innerHTML+='<link rel="stylesheet" type="text/css" href="ejercicio_style.css">'
-		//document.body.innerHTML+='hola'
-		imprimeApp('http://i.blogs.es/85042c/as17-148-22727/650_1200.jpg','hola','hola','hola');
-		imprimeApp('http://i.blogs.es/85042c/as17-148-22727/650_1200.jpg','hola','hola','hola');
-	}
-
-	function imprimeApp(link,nombre,descripcion,precio) {
-		document.body.innerHTML += "<div class=\"tabla\"><div class=\"fila\">"+
-		"<div class=\"bloque\">"+
-		"<img src=\""+ link +"\"/>"+
-		"</div>"+
-		"<div class=\"bloque\">"+
-		
-		"<p>"+ nombre +"</p>	"+
-		
-		"<p>"+ descripcion +"</p>	"+
-		
-		"<p>"+ precio +"</p>	"+
-		
-		"</div>"+
-		"</div></div>";
-	}
-
-	</script>
 
 
 	<script src="javascrit.js"></script>
